@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprende Jugando</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>🎓 Aprende Jugando</h1>
+        <p>¡Aprender también puede ser divertido!</p>
+    </header>
+
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- MENÚ DE MATERIAS -->
+        <!-- ========================= -->
+
+        <section id="menu-materias" class="menu-materias">
+
+            <h2>🎓 ¿Qué quieres aprender?</h2>
+
+            <p class="subtitulo">
+                Elige una materia y comienza a jugar
+            </p>
+
+            <div class="materias">
+
+                <button class="materia" id="btn-matematicas">
+                    <span class="icono">🔢</span>
+                    <span>Matemáticas</span>
+                    <small>¡Resuelve operaciones!</small>
+                </button>
+
+
+                <button class="materia" id="btn-lectura">
+                    <span class="icono">📖</span>
+                    <span>Lectura</span>
+                    <small>¡Descubre las palabras!</small>
+                </button>
+
+
+                <button class="materia" id="btn-ciencias">
+                    <span class="icono">🔬</span>
+                    <span>Ciencias</span>
+                    <small>¡Descubre el mundo!</small>
+                </button>
+
+
+                <button class="materia" id="btn-arte">
+                    <span class="icono">🎨</span>
+                    <span>Arte</span>
+                    <small>¡Pon a prueba tu creatividad!</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- JUEGO DE MATEMÁTICAS -->
+        <!-- ========================= -->
+
+        <section id="juego-matematicas" class="juego" style="display: none;">
+
+            <button id="volver-matematicas" class="volver-menu">
+                ⬅️ Volver a materias
+            </button>
+
+            <h2>🔢 Matemáticas</h2>
+
+            <p class="instruccion">
+                Resuelve la operación y elige la respuesta correcta.
+            </p>
+
+            <p id="pregunta-matematicas" class="pregunta"></p>
+
+            <div id="respuestas-matematicas" class="respuestas"></div>
+
+            <p id="resultado-matematicas" class="resultado"></p>
+
+            <div class="informacion-juego">
+
+                <p id="puntos-matematicas">
+                    ⭐ Puntos: 0
+                </p>
+
+                <p id="vidas-matematicas">
+                    ❤️❤️❤️
+                </p>
+
+            </div>
+
+            <p id="progreso-matematicas" class="progreso">
+                Pregunta 1 de 10
+            </p>
+
+            <div class="barra-progreso">
+                <div id="barra-matematicas"></div>
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- JUEGO DE LECTURA -->
+        <!-- ========================= -->
+
+        <section id="juego-lectura" class="juego" style="display: none;">
+
+            <button id="volver-lectura" class="volver-menu">
+                ⬅️ Volver a materias
+            </button>
+
+            <h2>📖 Lectura</h2>
+
+            <p class="instruccion">
+                Observa la imagen y elige la palabra correcta.
+            </p>
+
+            <div id="imagen-lectura" class="imagen-lectura">
+                🐱
+            </div>
+
+            <p id="pregunta-lectura" class="pregunta">
+                ¿Qué palabra corresponde a la imagen?
+            </p>
+
+            <div id="respuestas-lectura" class="respuestas"></div>
+
+            <p id="resultado-lectura" class="resultado"></p>
+
+            <div class="informacion-juego">
+
+                <p id="puntos-lectura">
+                    ⭐ Puntos: 0
+                </p>
+
+                <p id="vidas-lectura">
+                    ❤️❤️❤️
+                </p>
+
+            </div>
+
+            <p id="progreso-lectura" class="progreso">
+                Pregunta 1 de 10
+            </p>
+
+            <div class="barra-progreso">
+                <div id="barra-lectura"></div>
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- JUEGO DE CIENCIAS -->
+        <!-- ========================= -->
+
+        <section id="juego-ciencias" class="juego" style="display: none;">
+
+            <button id="volver-ciencias" class="volver-menu">
+                ⬅️ Volver a materias
+            </button>
+
+            <h2>🔬 Ciencias</h2>
+
+            <p class="instruccion">
+                Lee la pregunta y selecciona la respuesta correcta.
+            </p>
+
+            <p id="pregunta-ciencias" class="pregunta"></p>
+
+            <div id="respuestas-ciencias" class="respuestas"></div>
+
+            <p id="resultado-ciencias" class="resultado"></p>
+
+            <div class="informacion-juego">
+
+                <p id="puntos-ciencias">
+                    ⭐ Puntos: 0
+                </p>
+
+                <p id="vidas-ciencias">
+                    ❤️❤️❤️
+                </p>
+
+            </div>
+
+            <p id="progreso-ciencias" class="progreso">
+                Pregunta 1 de 10
+            </p>
+
+            <div class="barra-progreso">
+                <div id="barra-ciencias"></div>
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- JUEGO DE ARTE -->
+        <!-- ========================= -->
+
+        <section id="juego-arte" class="juego" style="display: none;">
+
+            <button id="volver-arte" class="volver-menu">
+                ⬅️ Volver a materias
+            </button>
+
+            <h2>🎨 Arte</h2>
+
+            <p class="instruccion">
+                Pon a prueba tus conocimientos sobre arte.
+            </p>
+
+            <p id="pregunta-arte" class="pregunta"></p>
+
+            <div id="respuestas-arte" class="respuestas"></div>
+
+            <p id="resultado-arte" class="resultado"></p>
+
+            <div class="informacion-juego">
+
+                <p id="puntos-arte">
+                    ⭐ Puntos: 0
+                </p>
+
+                <p id="vidas-arte">
+                    ❤️❤️❤️
+                </p>
+
+            </div>
+
+            <p id="progreso-arte" class="progreso">
+                Pregunta 1 de 10
+            </p>
+
+            <div class="barra-progreso">
+                <div id="barra-arte"></div>
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PANTALLA FINAL -->
+        <!-- ========================= -->
+
+        <section id="pantalla-final" class="pantalla-final" style="display: none;">
+
+            <div class="trofeo">
+                🏆
+            </div>
+
+            <h2>¡Juego terminado!</h2>
+
+            <p id="mensaje-final"></p>
+
+            <p id="puntuacion-final"></p>
+
+            <div id="estrellas-finales" class="estrellas">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <button id="reiniciar">
+                🔄 Jugar nuevamente
+            </button>
+
+            <button id="volver-menu-final" class="boton-secundario">
+                🏠 Volver al menú
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="JavaScript/app.js"></script>
+
+</body>
+
+</html>

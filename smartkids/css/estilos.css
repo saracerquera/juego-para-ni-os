@@ -1,0 +1,501 @@
+/* ========================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    min-height: 100vh;
+    color: #333;
+}
+
+
+/* ========================= */
+/* ENCABEZADO */
+/* ========================= */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #4dabf7, #845ef7);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+/* ========================= */
+/* CONTENIDO PRINCIPAL */
+/* ========================= */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+/* ========================= */
+/* MENÚ DE MATERIAS */
+/* ========================= */
+
+.menu-materias {
+    text-align: center;
+}
+
+.menu-materias h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+/* ========================= */
+/* TARJETAS DE MATERIAS */
+/* ========================= */
+
+.materias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.materia {
+    min-height: 220px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s,
+                box-shadow 0.2s;
+}
+
+.materia:hover {
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.materia:active {
+    transform: scale(0.97);
+}
+
+.materia .icono {
+    font-size: 70px;
+}
+
+.materia small {
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+}
+
+
+/* ========================= */
+/* JUEGO */
+/* ========================= */
+
+.juego {
+    max-width: 750px;
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+}
+
+.juego h2 {
+    font-size: 36px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.instruccion {
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* ========================= */
+/* BOTÓN VOLVER */
+/* ========================= */
+
+.volver-menu {
+    border: none;
+
+    background: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    color: #495057;
+}
+
+.volver-menu:hover {
+    color: #4dabf7;
+}
+
+
+/* ========================= */
+/* PREGUNTA */
+/* ========================= */
+
+.pregunta {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin: 30px 0;
+
+    min-height: 40px;
+}
+
+
+/* ========================= */
+/* RESPUESTAS */
+/* ========================= */
+
+.respuestas {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin: 25px 0;
+}
+
+.respuesta {
+    min-width: 130px;
+
+    padding: 18px 25px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #4dabf7, #339af0);
+
+    color: white;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s,
+                box-shadow 0.2s;
+}
+
+.respuesta:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.respuesta:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================= */
+/* RESULTADO */
+/* ========================= */
+
+.resultado {
+    min-height: 35px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+}
+
+
+/* ========================= */
+/* INFORMACIÓN DEL JUEGO */
+/* ========================= */
+
+.informacion-juego {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin: 20px 0;
+}
+
+.informacion-juego p {
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+#vidas-matematicas,
+#vidas-lectura,
+#vidas-ciencias,
+#vidas-arte {
+    font-size: 25px;
+
+    letter-spacing: 4px;
+}
+
+
+/* ========================= */
+/* PROGRESO */
+/* ========================= */
+
+.progreso {
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 10px;
+}
+
+
+/* ========================= */
+/* BARRA DE PROGRESO */
+/* ========================= */
+
+.barra-progreso {
+    width: 100%;
+
+    height: 15px;
+
+    background-color: #e9ecef;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 15px 0 10px;
+}
+
+#barra-matematicas,
+#barra-lectura,
+#barra-ciencias,
+#barra-arte {
+    width: 0%;
+
+    height: 100%;
+
+    background-color: #51cf66;
+
+    border-radius: 20px;
+
+    transition: width 0.3s;
+}
+
+
+/* ========================= */
+/* LECTURA */
+/* ========================= */
+
+.imagen-lectura {
+    font-size: 110px;
+
+    margin: 25px 0;
+}
+
+
+/* ========================= */
+/* PANTALLA FINAL */
+/* ========================= */
+
+.pantalla-final {
+    max-width: 750px;
+
+    margin: 40px auto;
+
+    padding: 45px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+}
+
+.trofeo {
+    font-size: 80px;
+}
+
+.pantalla-final h2 {
+    font-size: 40px;
+}
+
+.pantalla-final p {
+    font-size: 27px;
+
+    font-weight: bold;
+}
+
+.estrellas {
+    font-size: 35px;
+
+    margin: 25px;
+}
+
+
+/* ========================= */
+/* BOTONES FINALES */
+/* ========================= */
+
+.pantalla-final button {
+    display: block;
+
+    width: 80%;
+
+    max-width: 350px;
+
+    margin: 15px auto;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #4dabf7, #339af0);
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.pantalla-final button:hover {
+    transform: scale(1.05);
+}
+
+.pantalla-final .boton-secundario {
+    background: #868e96;
+}
+
+
+/* ========================= */
+/* RESPONSIVE - CELULAR */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .materias {
+        grid-template-columns: 1fr;
+
+        padding: 10px;
+    }
+
+    .materia {
+        min-height: 190px;
+    }
+
+    .juego {
+        padding: 25px 15px;
+    }
+
+    .juego h2 {
+        font-size: 30px;
+    }
+
+    .pregunta {
+        font-size: 25px;
+    }
+
+    .informacion-juego {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .respuesta {
+        width: 90%;
+
+        max-width: 300px;
+    }
+
+    .pantalla-final {
+        padding: 30px 15px;
+    }
+
+    .pantalla-final h2 {
+        font-size: 32px;
+    }
+
+}
